@@ -54,36 +54,44 @@ const Img2pdf = () =>{
             {Makenav()}
             <div className='App-header'>
                 <div className='container'>
-                    <div className='row align-items'>
-                        <div className='btn-group-vertical col'>
-                            <button className='btn btn-dark' onClick={ToInitMenu}>
-                                Menú inicial
-                            </button>
-                            <button className='btn btn-outline-dark'>
-                                Convertir imagenes a pdf
-                                
-                            </button>
-                            <button className='btn btn-dark'>
-                                Convertir .vid a mp4
-                            </button>
-                        </div>
-                        <div className='col'>
-                            <p className='lead'>
-                                Aqui puedes subir tu archivo en formato png, jpg, jpeg</p>
-                        
-                            <input id="file" 
-                            type="file" 
-                            name="static_file" 
-                            accept='image/*'
+                    <table>
+                        <tr>
+                            <td>
+                            <div className='btn-group-vertical'>
+                                <button className='btn btn-dark' onClick={ToInitMenu}>
+                                    Menú inicial
+                                </button>
+                                <button className='btn btn-outline-dark'>
+                                    Convertir imagenes a pdf
+                                    
+                                </button>
+                                <button className='btn btn-dark'>
+                                    Convertir .vid a mp4
+                                </button>
+                            </div>
+                            </td>
+                            <td>
+                            <div className='container'>
+                                <p className='fs-6'>
+                                    Aqui puedes subir tu archivo en formato png, jpg, jpeg</p>
                             
-                            className='btn btn-dark' onChange={uploadFile}/>
+                                <input id="file" 
+                                type="file" 
+                                name="static_file" 
+                                accept='image/*'
+                                
+                                className='btn btn-dark' onChange={uploadFile}/>
 
-                        </div>
-                        <div className='col'>
-                        <button onClick={() => {if(imgd) downloadPDF();}} 
-                            className='btn btn-dark'> Converir a pdf</button>
-                        </div>
-                    </div>
+                            </div>
+                            </td>
+                            <td>
+                            <div className='container'>
+                            <button onClick={() => {if(imgd) downloadPDF();}} 
+                                className='btn btn-dark'> Converir a pdf</button>
+                            </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>               
             <Routes>

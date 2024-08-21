@@ -18,25 +18,23 @@ function Table(){
             {Makenav()}
             <div className='App-header'>
                 <div className='container'>
-                    <div className='row align-items'>
-                        <div className='btn-group-vertical col'>
-                                <button className='btn btn-outline-dark' >
-                                    Menú actual
-                                </button>
-                                <button className='btn btn-dark' onClick={ToImg2PDf}>
-                                    Convertir imagenes a pdf
-                                </button>
-                                <button className='btn btn-dark'>
-                                    Convertir .vid a mp4
-                                </button>
-                        </div>
-                        <div className='col'>
-                            <h1>Formato name</h1>
-                            <p className='lead'>Cambia el formato de tus archivos,
+                    <div className='container'>
+                        <h1>Formato name</h1>
+                        <p className='fs-6'>Cambia el formato de tus archivos,
                             imagenes y audio de modo gratuito</p>
-                        </div>
-                        <div className='col'></div>
-                </div>
+                    </div>
+
+                    <div className='btn-group-vertical'>
+                        <button className='btn btn-outline-dark' >
+                            Menú actual
+                        </button>
+                        <button className='btn btn-dark' onClick={ToImg2PDf}>
+                            Convertir imagenes a pdf
+                        </button>
+                        <button className='btn btn-dark'>
+                            Convertir .vid a mp4
+                        </button>
+                    </div>
                 </div>
             </div>
             <Routes>

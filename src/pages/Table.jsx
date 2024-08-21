@@ -37,12 +37,6 @@ function Table(){
                     </div>
                 </div>
             </div>
-            <Routes>
-                <Route
-                path="/cimg"
-                element={<Img2pdf />}
-                ></Route>
-            </Routes>
         </section>
     )
 }

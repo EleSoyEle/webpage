@@ -94,12 +94,7 @@ const Img2pdf = () =>{
                     </table>
                 </div>
             </div>               
-            <Routes>
-                <Route
-                    path="/"
-                    element={<Table/>}
-                />
-            </Routes>
+            
         </section>
     )
 }

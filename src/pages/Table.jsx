@@ -3,6 +3,8 @@ import '../App.css'
 import React from "react";
 import { Route, useNavigate, Routes } from 'react-router-dom';
 import Img2pdf from './img2pdf';
+import Makenav from "../utils.js"
+
 
 function Table(){
     let navigate = useNavigate();
@@ -10,25 +12,26 @@ function Table(){
         navigate("/cimg")
     }
 
-    
+
     return(
         <section>
+            {Makenav()}
             <div className='App-header'>
-                <h1>Formato name</h1>
                 <div className='container'>
                     <div className='row align-items'>
                         <div className='btn-group-vertical col'>
-                                <button className='btn btn-outline-primary' >
+                                <button className='btn btn-outline-dark' >
                                     Menú actual
                                 </button>
-                                <button className='btn btn-primary' onClick={ToImg2PDf}>
+                                <button className='btn btn-dark' onClick={ToImg2PDf}>
                                     Convertir imagenes a pdf
                                 </button>
-                                <button className='btn btn-primary'>
+                                <button className='btn btn-dark'>
                                     Convertir .vid a mp4
                                 </button>
                         </div>
                         <div className='col'>
+                            <h1>Formato name</h1>
                             <p className='lead'>Cambia el formato de tus archivos,
                             imagenes y audio de modo gratuito</p>
                         </div>

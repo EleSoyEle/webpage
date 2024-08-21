@@ -4,6 +4,9 @@ import {React, useState} from "react";
 import { Route, useNavigate, Routes } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import Table from './Table';
+import Makenav from "../utils.js"
+
+
 
 const Img2pdf = () =>{
     let navigate = useNavigate()
@@ -48,19 +51,19 @@ const Img2pdf = () =>{
     
     return(
         <section>
+            {Makenav()}
             <div className='App-header'>
-                <h1>Convertir imagenes a pdf</h1>
                 <div className='container'>
                     <div className='row align-items'>
                         <div className='btn-group-vertical col'>
-                            <button className='btn btn-primary' onClick={ToInitMenu}>
+                            <button className='btn btn-dark' onClick={ToInitMenu}>
                                 Menú inicial
                             </button>
-                            <button className='btn btn-outline-primary'>
+                            <button className='btn btn-outline-dark'>
                                 Convertir imagenes a pdf
                                 
                             </button>
-                            <button className='btn btn-primary'>
+                            <button className='btn btn-dark'>
                                 Convertir .vid a mp4
                             </button>
                         </div>
@@ -73,12 +76,13 @@ const Img2pdf = () =>{
                             name="static_file" 
                             accept='image/*'
                             
-                            className='btn btn-primary' onChange={uploadFile}/>
+                            className='btn btn-dark' onChange={uploadFile}/>
 
-                            <button onClick={() => {if(imgd) downloadPDF();}} 
-                            className='btn btn-primary'> Upload </button>
                         </div>
-                        <div className='col'></div>
+                        <div className='col'>
+                        <button onClick={() => {if(imgd) downloadPDF();}} 
+                            className='btn btn-dark'> Converir a pdf</button>
+                        </div>
                     </div>
                 </div>
             </div>               

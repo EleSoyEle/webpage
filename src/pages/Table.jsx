@@ -19,21 +19,22 @@ function Table(){
             <div className='App-header'>
                 <div className='container'>
                     <div>
-                        <h1 className='titles'>Formato name</h1>
+                        <h1 className='titles'>Fileformat</h1>
                         <p className='fs-6 body_text'>Cambia el formato de tus archivos,
                             imagenes y audio de modo gratuito</p>
                     </div>
-
-                    <div className='btn-group-vertical'>
-                        <button className='btn btn-outline-dark' >
-                            Menú actual
-                        </button>
-                        <button className='btn btn-dark' onClick={ToImg2PDf}>
-                            Convertir imagenes a pdf
-                        </button>
-                        <button className='btn btn-dark'>
-                            Convertir .vid a mp4
-                        </button>
+                    <div className="container">
+                        <div className='btn-group-vertical'>
+                            <button className='btn btn-outline-dark' >
+                                Menú actual
+                            </button>
+                            <button className='btn btn-dark' onClick={ToImg2PDf}>
+                                Convertir imagenes a pdf
+                            </button>
+                            <button className='btn btn-dark'>
+                                Convertir .vid a mp4
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

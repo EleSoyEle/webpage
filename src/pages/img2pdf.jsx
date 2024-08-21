@@ -54,6 +54,9 @@ const Img2pdf = () =>{
             {Makenav()}
             <div className='App-header'>
                 <div className='container'>
+                <p className='fs-6 body_text'>
+                Aqui puedes subir tu archivo en formato png, jpg, jpeg</p>
+                            
                     <table>
                         <tr>
                             <td>
@@ -72,9 +75,6 @@ const Img2pdf = () =>{
                             </td>
                             <td>
                             <div className='container'>
-                                <p className='fs-6'>
-                                    Aqui puedes subir tu archivo en formato png, jpg, jpeg</p>
-                            
                                 <input id="file" 
                                 type="file" 
                                 name="static_file" 
@@ -87,7 +87,7 @@ const Img2pdf = () =>{
                             <td>
                             <div className='container'>
                             <button onClick={() => {if(imgd) downloadPDF();}} 
-                                className='btn btn-dark'> Converir a pdf</button>
+                                className='btn btn-dark'> Convertir a pdf</button>
                             </div>
                             </td>
                         </tr>

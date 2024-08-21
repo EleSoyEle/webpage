@@ -18,9 +18,9 @@ function Table(){
             {Makenav()}
             <div className='App-header'>
                 <div className='container'>
-                    <div className='container'>
-                        <h1>Formato name</h1>
-                        <p className='fs-6'>Cambia el formato de tus archivos,
+                    <div>
+                        <h1 className='titles'>Formato name</h1>
+                        <p className='fs-6 body_text'>Cambia el formato de tus archivos,
                             imagenes y audio de modo gratuito</p>
                     </div>
 

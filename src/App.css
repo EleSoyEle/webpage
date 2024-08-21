@@ -27,6 +27,12 @@
 .textohead{
   color: white;
 }
+.titles{
+  text-align: center;
+}
+.body_text{
+  text-align: center;
+}
 
 .App-link {
   color: #61dafb;

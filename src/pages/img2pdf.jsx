@@ -14,6 +14,8 @@ const Img2pdf = () =>{
         navigate("/")
     }
     
+    const [w, setw] = useState(null);
+    const [h, seth] = useState(null);
     const [image, setImage] = useState(null);
     const [imgd,setImgdata] = useState(null);
     const [fnm,setFname] = useState(null);
@@ -21,6 +23,7 @@ const Img2pdf = () =>{
         const file = event.target.files[0];
         if (file) {
             const name = file.name;
+            console.log(file)
             const fname = name.split(".")[0];
             // Convertir imagen a base64
             const reader = new FileReader();
@@ -28,7 +31,13 @@ const Img2pdf = () =>{
                 const imgData = e.target.result;
                 setImgdata(imgData);
                 setFname(fname)
-                //makePDF(imgData, fname);
+                const img = new Image();
+            img.onload = () => {
+                const width = img.width;
+                const height = img.height;
+                setw(width);
+                seth(height);
+            };
           };
             reader.readAsDataURL(file);
         } 
@@ -38,13 +47,13 @@ const Img2pdf = () =>{
     };
 
     function downloadPDF(){
-        makePDF(imgd,fnm);
+        makePDF(imgd,fnm,w,h);
     }
 
 
-    const makePDF = (imgData, name) => {
+    const makePDF = (imgData, name,wi,he) => {
         const doc = new jsPDF();
-        doc.addImage(imgData, 'JPEG', 10, 10, 180, 160); // Ajusta según sea necesario
+        doc.addImage(imgData, 'JPEG', 10, 10, wi, he);
         //doc.output('dataurlnewwindow'); // Abre el PDF en una nueva ventana
         doc.save(`${name}.pdf`); 
 };
@@ -55,12 +64,11 @@ const Img2pdf = () =>{
             <div className='App-header'>
                 <div className='container'>
                 <p className='fs-6 body_text'>
-                Aqui puedes subir tu archivo en formato png, jpg, jpeg</p>
-                            
+                Sube los archivos</p>                          
                     <table>
                         <tr>
                             <td>
-                            <div className='btn-group-vertical'>
+                            <div className='btn-group-vertical shadow'>
                                 <button className='btn btn-dark' onClick={ToInitMenu}>
                                     Menú inicial
                                 </button>
@@ -80,14 +88,14 @@ const Img2pdf = () =>{
                                 name="static_file" 
                                 accept='image/*'
                                 
-                                className='btn btn-dark' onChange={uploadFile}/>
+                                className='btn btn-dark shadow' onChange={uploadFile}/>
 
                             </div>
                             </td>
                             <td>
                             <div className='container'>
                             <button onClick={() => {if(imgd) downloadPDF();}} 
-                                className='btn btn-dark'> Convertir a pdf</button>
+                                className='btn btn-dark shadow'> Convertir a pdf</button>
                             </div>
                             </td>
                         </tr>

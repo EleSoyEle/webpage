@@ -24,11 +24,11 @@ function Table(){
                             imagenes y audio de modo gratuito</p>
                     </div>
                     <div className="container">
-                        <div className='btn-group-vertical'>
-                            <button className='btn btn-outline-dark' >
+                        <div className='btn-group-vertical shadow'>
+                            <button className='btn btn-outline-dark ' >
                                 Menú actual
                             </button>
-                            <button className='btn btn-dark' onClick={ToImg2PDf}>
+                            <button className='btn btn-dark ' onClick={ToImg2PDf}>
                                 Convertir imagenes a pdf
                             </button>
                             <button className='btn btn-dark'>

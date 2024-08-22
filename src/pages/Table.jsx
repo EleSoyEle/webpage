@@ -20,7 +20,7 @@ function Table(){
                 <div className='container'>
                     <div>
                         <h1 className='titles'>Fileformat</h1>
-                        <p className='fs-6 body_text'>Cambia el formato de tus archivos,
+                        <p className='fs-6 body_text lead'>Cambia el formato de tus archivos,
                             imagenes y audio de modo gratuito</p>
                     </div>
                     <div className="container">

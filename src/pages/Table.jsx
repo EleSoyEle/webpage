@@ -27,7 +27,7 @@ function Table(){
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item defaultActiveKey="0" eventKey="0">
                                 <Accordion.Header>Convertir imagenes a cualquier formato pdf</Accordion.Header>
-                                <Accordion.Body className=''>
+                                <Accordion.Body >
                                     <p className='fs-6 lead'>Aqui puedes cambiar el formato de tus
                                     archivos a pdf</p>
                                     <button className='btn btn-dark' onClick={ToImg2PDf}>

@@ -5,6 +5,7 @@ import { Route, useNavigate, Routes } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import Table from './Table';
 import Makenav from "../utils.js"
+import { Accordion } from 'react-bootstrap';
 
 
 
@@ -65,41 +66,33 @@ const Img2pdf = () =>{
                 <div className='container'>
                 <p className='fs-6 body_text'>
                 Sube los archivos</p>                          
-                    <table>
-                        <tr>
-                            <td>
-                            <div className='btn-group-vertical shadow'>
-                                <button className='btn btn-dark' onClick={ToInitMenu}>
-                                    Menú inicial
-                                </button>
-                                <button className='btn btn-outline-dark'>
-                                    Convertir imagenes a pdf
-                                    
-                                </button>
-                                <button className='btn btn-dark'>
-                                    Convertir .vid a mp4
-                                </button>
-                            </div>
-                            </td>
-                            <td>
+                <Accordion>
+                    <Accordion.Item  eventKey='0'>
+                        <Accordion.Header>Sube la imagen en formato png o jpg</Accordion.Header>
+                        <Accordion.Body>
                             <div className='container'>
+                                <p className='fs-6' lead>Selecciona el archivo</p>
                                 <input id="file" 
                                 type="file" 
                                 name="static_file" 
                                 accept='image/*'
-                                
-                                className='btn btn-dark shadow' onChange={uploadFile}/>
+                                className='btn btn-dark' onChange={uploadFile}/>
 
                             </div>
-                            </td>
-                            <td>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion>
+                        <Accordion.Item eventKey='1'>
+                            <Accordion.Header>Descarga el archivo</Accordion.Header>
+                            <Accordion.Body>
                             <div className='container'>
                             <button onClick={() => {if(imgd) downloadPDF();}} 
                                 className='btn btn-dark shadow'> Convertir a pdf</button>
                             </div>
-                            </td>
-                        </tr>
-                    </table>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Accordion>
                 </div>
             </div>               
             

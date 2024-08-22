@@ -3,7 +3,7 @@ import '../App.css'
 import React from "react";
 import { Route, useNavigate, Routes } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
-import Makenav from "../utils.js"
+import {Makenav,MakeFooter} from "../utils.jsx"
 
 
 function Table(){
@@ -24,7 +24,7 @@ function Table(){
                             imagenes y audio de modo gratuito</p>
                     </div>
                     <div className="container">
-                        <Accordion defaultActiveKey="0">
+                        <Accordion >
                             <Accordion.Item defaultActiveKey="0" eventKey="0">
                                 <Accordion.Header>Convertir imagenes a cualquier formato pdf</Accordion.Header>
                                 <Accordion.Body >
@@ -43,7 +43,7 @@ function Table(){
                                     <p className='fs-6 lead'>Aqui puedes cambiar el formato de tus
                                     archivos</p>
                                     <button className='btn btn-dark' onClick={ToImg2PDf}>
-                                        Convertir imagenes a pdf
+                                        Convertir formato .vid a mp4
                                     </button>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -51,6 +51,7 @@ function Table(){
                     </div>
                 </div>
             </div>
+            {MakeFooter()}
         </section>
     )
 }

@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
 import {React, useState} from "react";
-import { Route, useNavigate, Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
-import Table from './Table';
-import Makenav from "../utils.js"
+import {Makenav,MakeFooter} from "../utils.jsx"
 import { Accordion } from 'react-bootstrap';
 
 
@@ -14,7 +13,6 @@ const Img2pdf = () =>{
     function ToInitMenu(){
         navigate("/")
     }
-    
     const [w, setw] = useState(null);
     const [h, seth] = useState(null);
     const [image, setImage] = useState(null);
@@ -64,6 +62,9 @@ const Img2pdf = () =>{
             {Makenav()}
             <div className='App-header'>
                 <div className='container'>
+                <h1 className='titles'>Fileformat</h1>
+                <p className='fs-6 body_text lead'>Cambia el formato de tus archivos,
+                    imagenes y audio de modo gratuito</p>
                 <p className='fs-6 body_text'>
                 Sube los archivos</p>                          
                 <Accordion>
@@ -71,7 +72,7 @@ const Img2pdf = () =>{
                         <Accordion.Header>Sube la imagen en formato png o jpg</Accordion.Header>
                         <Accordion.Body>
                             <div className='container'>
-                                <p className='fs-6' lead>Selecciona el archivo</p>
+                                <p className='fs-6 lead'>Selecciona el archivo</p>
                                 <input id="file" 
                                 type="file" 
                                 name="static_file" 
@@ -87,7 +88,7 @@ const Img2pdf = () =>{
                             <Accordion.Body>
                             <div className='container'>
                             <button onClick={() => {if(imgd) downloadPDF();}} 
-                                className='btn btn-dark shadow'> Convertir a pdf</button>
+                                className='btn btn-dark shadow'> Descargar</button>
                             </div>
                             </Accordion.Body>
                         </Accordion.Item>
@@ -95,7 +96,7 @@ const Img2pdf = () =>{
                 </Accordion>
                 </div>
             </div>               
-            
+            {MakeFooter()}
         </section>
     )
 }

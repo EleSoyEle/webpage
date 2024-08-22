@@ -50,6 +50,11 @@
   overflow-y: auto;
   padding: 1rem;
 }
+.logo {
+  width: 5%;
+  height: 5%;
+  object-fit: cover; /* Cambia 'cover' por 'contain' si deseas que la imagen se ajuste sin recortar */
+}
 
 
 

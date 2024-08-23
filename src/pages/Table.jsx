@@ -4,6 +4,7 @@ import React from "react";
 import { Route, useNavigate, Routes } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import {Makenav,MakeFooter} from "../utils.jsx"
+import { Analytics } from "@vercel/analytics/react"
 
 
 function Table(){
@@ -51,6 +52,7 @@ function Table(){
                     </div>
                 </div>
             </div>
+            <Analytics/>
             {MakeFooter()}
         </section>
     )

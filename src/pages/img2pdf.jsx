@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import {Makenav,MakeFooter} from "../utils.jsx"
 import { Accordion } from 'react-bootstrap';
-
+import { Analytics } from '@vercel/analytics/react';
 
 
 const Img2pdf = () =>{
@@ -95,7 +95,8 @@ const Img2pdf = () =>{
                     </Accordion>
                 </Accordion>
                 </div>
-            </div>               
+            </div>
+            <Analytics/>
             {MakeFooter()}
         </section>
     )

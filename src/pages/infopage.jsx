@@ -12,6 +12,7 @@ import logo from '../logo192withbg.png'
 const InfoPage = () => {
     return (
         <section>
+            
             {Makenav()}
             <div className='container'>
                 

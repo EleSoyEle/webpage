@@ -94,6 +94,17 @@ const Img2pdf = () =>{
                         </Accordion.Item>
                     </Accordion>
                 </Accordion>
+                <br></br>
+                <p className='fs-6 lead'>
+                    El código que impulsa esta funcionalidad se basa en JavaScript y React. Cuando subes una imagen a través del componente &lt;input&gt; en nuestro formulario,
+                    una función llamada <b>uploadFile()</b> se ejecuta para manejar el archivo seleccionado.
+                    Posteriormente, cuando haces clic en el botón de descarga, la función <b>downloadPDF() </b> 
+                    se asegura de que la imagen se convierta correctamente a PDF.
+                </p>
+                <p className='fs-6 lead'>
+                    Al no tener que hacer peticiones a un servidor, la descarga es mucho mas rapida
+                    que con otras herramientas
+                </p>
                 </div>
             </div>
             <Analytics/>

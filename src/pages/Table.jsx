@@ -10,7 +10,7 @@ import { Analytics } from "@vercel/analytics/react"
 function Table(){
     let navigate = useNavigate();
     function ToImg2PDf(){
-        navigate("/cimg")
+        navigate("/convert2pdf")
     }
 
 

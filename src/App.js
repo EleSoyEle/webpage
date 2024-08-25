@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Table from "./pages/Table"
 import Img2pdf from './pages/img2pdf';
+import InfoPage from './pages/infopage';
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
                   element={<Table />}
                 />
                 <Route 
-                path="/cimg"
+                path="/convert2pdf"
                 element={<Img2pdf/>}
+                />
+                <Route
+                path="/info"
+                element={<InfoPage/>}
                 />
             </Routes>
           </>

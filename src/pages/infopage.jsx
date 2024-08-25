@@ -7,12 +7,12 @@ import {Makenav,MakeFooter} from "../utils.jsx"
 import { Accordion } from 'react-bootstrap';
 import { Analytics } from '@vercel/analytics/react';
 import logo from '../logo192withbg.png'
+import { Helmet } from 'react-helmet';
 
 
 const InfoPage = () => {
     return (
         <section>
-            
             {Makenav()}
             <div className='container'>
                 

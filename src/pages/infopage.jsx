@@ -69,7 +69,7 @@ const InfoPage = () => {
                 </p>
             </div>
             <br></br>
-            <Analytics/>x
+            <Analytics/>
             {MakeFooter()}
         </section>
     )

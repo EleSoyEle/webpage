@@ -6,6 +6,8 @@ import jsPDF from 'jspdf';
 import {Makenav,MakeFooter} from "../utils.jsx"
 import { Accordion } from 'react-bootstrap';
 import { Analytics } from '@vercel/analytics/react';
+import { Helmet } from 'react-helmet';
+
 
 
 const Img2pdf = () =>{
@@ -60,6 +62,9 @@ const Img2pdf = () =>{
     return(
         <section>
             {Makenav()}
+            <Helmet>
+            <script type='text/javascript' src='//pl24162292.cpmrevenuegate.com/39/f6/c1/39f6c10605a31bd88cfe529d7c45edea.js'></script>
+            </Helmet>
             <div className='App-header'>
                 <div className='container'>
                 <h1 className='titles'>Fileformat</h1>

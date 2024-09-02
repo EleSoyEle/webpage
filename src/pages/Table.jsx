@@ -5,6 +5,7 @@ import { Route, useNavigate, Routes } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import {Makenav,MakeFooter} from "../utils.jsx"
 import { Analytics } from "@vercel/analytics/react"
+import { Helmet } from 'react-helmet';
 
 
 function Table(){
@@ -17,6 +18,9 @@ function Table(){
     return(
         <section>
             {Makenav()}
+            <Helmet>
+            <script type='text/javascript' src='//pl24162292.cpmrevenuegate.com/39/f6/c1/39f6c10605a31bd88cfe529d7c45edea.js'></script>
+            </Helmet>
             <div className='App-header'>
                 <div className='container'>
                     <div>

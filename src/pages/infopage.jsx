@@ -14,6 +14,9 @@ const InfoPage = () => {
     return (
         <section>
             {Makenav()}
+            <Helmet>
+            <script type='text/javascript' src='//pl24162292.cpmrevenuegate.com/39/f6/c1/39f6c10605a31bd88cfe529d7c45edea.js'></script>
+            </Helmet>  
             <div className='container'>
                 
                 <div className='cint'>

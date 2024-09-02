@@ -1,10 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
-import {React, useState} from "react";
-import { useNavigate } from 'react-router-dom';
-import jsPDF from 'jspdf';
-import {Makenav,MakeFooter} from "../utils.jsx"
-import { Accordion } from 'react-bootstrap';
+import { React} from "react";
+import { Makenav,MakeFooter} from "../utils.jsx"
 import { Analytics } from '@vercel/analytics/react';
 import logo from '../logo192withbg.png'
 import { Helmet } from 'react-helmet';
@@ -16,6 +13,7 @@ const InfoPage = () => {
             {Makenav()}
             <Helmet>
             <script type='text/javascript' src='//pl24162292.cpmrevenuegate.com/39/f6/c1/39f6c10605a31bd88cfe529d7c45edea.js'></script>
+            <script type='text/javascript' src='//pl24155224.cpmrevenuegate.com/37/c5/b1/37c5b14324f51c9556082bd1d0bd8c49.js'></script>
             </Helmet>  
             <div className='container'>
                 
